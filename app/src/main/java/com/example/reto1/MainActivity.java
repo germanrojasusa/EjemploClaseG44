@@ -19,18 +19,22 @@ public class MainActivity extends AppCompatActivity{
     private Button botonSiguiente;
     private TextView num1;
     private TextView num2;
+    private Number suma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        suma = 0;
         botonSuma = (Button) findViewById(R.id.botonSuma);
         botonSiguiente = (Button) findViewById(R.id.botonSiguiente);
         miTexto = (TextView) findViewById(R.id.miTexto);
 
         num1 = (TextView) findViewById(R.id.num1);
         num2 = (TextView) findViewById(R.id.num2);
+
+        //miTexto.setText("Nombre: " + testPersonaje.getName());
 
         //Evento cuando se hace click sobre el botón botonSuma
         botonSuma.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +56,7 @@ public class MainActivity extends AppCompatActivity{
                     nro2 = 0;
                 }
 
-                int suma = nro1 + nro2;
+                suma = nro1 + nro2;
                 String resu = String.valueOf(suma);
                 miTexto.setText(resu);
 
@@ -93,6 +97,10 @@ public class MainActivity extends AppCompatActivity{
             miTexto.setText("Opción 2");
 
             Intent intentASiguiente = new Intent(getApplicationContext(), MainActivity3.class);
+            String sumaString = suma.toString();
+            //Para enviar información
+            intentASiguiente.putExtra("textoPrueba", "El resultado de la suma fue: " + sumaString);
+
             startActivity(intentASiguiente);
 
         }

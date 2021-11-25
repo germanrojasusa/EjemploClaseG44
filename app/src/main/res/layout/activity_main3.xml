@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity3">
 
+    <TextView
+        android:id="@+id/mensajePrueba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="78dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

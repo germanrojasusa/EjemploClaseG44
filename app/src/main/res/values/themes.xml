@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.EjemploClase" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <!--<style name="Theme.EjemploClase" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -21,8 +22,12 @@
     <!-- Ejemplo para la clase-->
     <style name="ejemploTextoClase" parent="Theme.EjemploClase">
         <item name="android:textColor">@color/c_principal_purple</item>
-        <item name="android:background">#EAE4E4</item>
-        <item name="android:backgroundTint">#EAE4E4</item>
+        <item name="android:layout_width">210dp</item>
+        <item name="android:layout_height">23dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:textAlignment">center</item>
+
+
     </style>
 
     <style name="Theme.EjemploClase.NoActionBar">
