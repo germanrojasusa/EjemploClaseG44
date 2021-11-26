@@ -6,6 +6,7 @@ public class Personaje {
     private String power;
     private int strength;
     private int agility;
+    private int imageId;
 
     public Personaje(String name){
         this.name = name;
@@ -15,9 +16,10 @@ public class Personaje {
         this.description = description;
     }
 
-    public Personaje(String name, String description, String power, int strength, int agility){
+    public Personaje(String name, String description, int imageId, String power, int strength, int agility){
         this.name = name;
         this.description = description;
+        this.imageId = imageId;
         this.power = power;
         this.strength = strength;
         this.agility = agility;
@@ -60,5 +62,13 @@ public class Personaje {
     }
     public String getPower() {
         return power;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
     }
 }

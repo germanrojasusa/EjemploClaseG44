@@ -1,7 +1,10 @@
 package com.example.reto1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,6 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
+
+    //Variables de ejemplo para guardar variables
+    private Boolean storeBoolean = false;
+    private int storeInt = 0;
+    private String storeString = "";
+
 
     private TextView miTexto;
     private Button botonSuma;
@@ -36,6 +45,12 @@ public class MainActivity extends AppCompatActivity{
 
         //miTexto.setText("Nombre: " + testPersonaje.getName());
 
+        /*
+        new AlertDialog.Builder(this)
+                .setTitle("Atención!")
+                .setMessage("Soy una alerta para mostrar valores: \nBooleano:"+storeBoolean+"\nInt:"+storeInt+"\nString:"+storeString)
+                .show();
+         */
         //Evento cuando se hace click sobre el botón botonSuma
         botonSuma.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -66,7 +81,7 @@ public class MainActivity extends AppCompatActivity{
         //Evento al hacer click en el botón botonSiguiente
         botonSiguiente.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intentASiguiente = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent intentASiguiente = new Intent(getApplicationContext(), MainActivity3.class);
                 startActivity(intentASiguiente);
             }
         });
@@ -110,5 +125,23 @@ public class MainActivity extends AppCompatActivity{
             miTexto.setText("Opción 3");
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putBoolean("llaveBooleanEj", true);
+        outState.putInt("llaveIntEj", storeInt+1);
+        outState.putString("llaveStringEj", storeString + "-");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        storeBoolean = savedInstanceState.getBoolean("llaveBooleanEj");
+        storeInt = savedInstanceState.getInt("llaveIntEj");
+        storeString = savedInstanceState.getString("llaveStringEj");
     }
 }
