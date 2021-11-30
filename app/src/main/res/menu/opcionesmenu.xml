@@ -7,7 +7,7 @@
         android:title="Item" />
     <item
         android:id="@+id/item2"
-        android:title="Item" />
+        android:title="Personajes" />
     <item
         android:id="@+id/item3"
         android:title="Item" />

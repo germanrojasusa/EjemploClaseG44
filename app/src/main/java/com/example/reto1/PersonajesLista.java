@@ -29,6 +29,10 @@ public class PersonajesLista implements RepositorioPersonajes {
     public void nuevo(Personaje personaje){
         listaPersonajes.add(personaje);
     }
+    public Personaje agregar(Personaje personaje){
+        listaPersonajes.add(personaje);
+        return(personaje);
+    }
 
     public int editar(int id, Personaje personaje){
         listaPersonajes.set(id, personaje);
@@ -44,7 +48,7 @@ public class PersonajesLista implements RepositorioPersonajes {
         nuevo(new Personaje("Thor", "Héroe Nórdico capáz de levantar un martillo legendario",R.drawable.thor,"Control del trueno y fuerza",9,7));
         nuevo(new Personaje("Spiderman", "Héroe juvenil que tiene poderes de araña", R.drawable.spiderman, "Agilidad de araña", 7,10));
         nuevo(new Personaje("Hulk", "Hombre extremdamente fuerte y verde", R.drawable.hulk,"Súper fuerza", 10, 5));
-        nuevo(new Personaje("Ironman","Millonario, genio y filántropo con un armadura muy poderosa",R.drawable.ironman,"Volar y disparar con su traje",8,6));
+        /*nuevo(new Personaje("Ironman","Millonario, genio y filántropo con un armadura muy poderosa",R.drawable.ironman,"Volar y disparar con su traje",8,6));
         nuevo(new Personaje("Capitan América"));
         nuevo(new Personaje("Capitan Marvel", "Heroína con super poderes adquiridos en el espacio. Es considerada de las más fuertes",R.drawable.captainmarvel,"Capacidad de volar y super fuerza",10,8));
         nuevo(new Personaje("Thor", "Héroe Nórdico capáz de levantar un martillo legendario",R.drawable.thor,"Control del trueno y fuerza",9,7));
@@ -56,7 +60,7 @@ public class PersonajesLista implements RepositorioPersonajes {
         nuevo(new Personaje("Hulk", "Hombre extremdamente fuerte y verde", R.drawable.hulk,"Súper fuerza", 10, 5));
         nuevo(new Personaje("Capitan Marvel", "Heroína con super poderes adquiridos en el espacio. Es considerada de las más fuertes",R.drawable.captainmarvel,"Capacidad de volar y super fuerza",10,8));
         nuevo(new Personaje("Thor", "Héroe Nórdico capáz de levantar un martillo legendario",R.drawable.thor,"Control del trueno y fuerza",9,7));
-        nuevo(new Personaje("Spiderman", "Héroe juvenil que tiene poderes de araña", R.drawable.spiderman, "Agilidad de araña", 7,10));
+        */nuevo(new Personaje("Spiderman", "Héroe juvenil que tiene poderes de araña", R.drawable.spiderman, "Agilidad de araña", 7,10));
         nuevo(new Personaje("Hulk", "Hombre extremdamente fuerte y verde", R.drawable.hulk,"Súper fuerza", 10, 5));
 
     }

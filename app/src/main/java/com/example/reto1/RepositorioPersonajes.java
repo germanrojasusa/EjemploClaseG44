@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public interface RepositorioPersonajes {
 
+    //Retorna el Personaje que esté en el id enviado
     public Personaje getPersonajeById(int id);
 
     //Edita un personaje
@@ -11,6 +12,9 @@ public interface RepositorioPersonajes {
 
     //Crea un personaje
     public void nuevo(Personaje personaje);
+
+    //Agregar un personaje
+    public Personaje agregar(Personaje personaje);
 
     //Borra un personaje
     public void borrar(int id);

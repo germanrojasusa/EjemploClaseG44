@@ -3,8 +3,6 @@ package com.example.reto1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity{
                 .setTitle("Atención!")
                 .setMessage("Soy una alerta para mostrar valores: \nBooleano:"+storeBoolean+"\nInt:"+storeInt+"\nString:"+storeString)
                 .show();
-         */
+        */
         //Evento cuando se hace click sobre el botón botonSuma
         botonSuma.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -81,7 +79,7 @@ public class MainActivity extends AppCompatActivity{
         //Evento al hacer click en el botón botonSiguiente
         botonSiguiente.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intentASiguiente = new Intent(getApplicationContext(), MainActivity3.class);
+                Intent intentASiguiente = new Intent(getApplicationContext(), PersonajesListaActivity.class);
                 startActivity(intentASiguiente);
             }
         });
@@ -111,7 +109,7 @@ public class MainActivity extends AppCompatActivity{
             Toast.makeText(this, "Presionamos la opción 2", Toast.LENGTH_SHORT).show();
             miTexto.setText("Opción 2");
 
-            Intent intentASiguiente = new Intent(getApplicationContext(), MainActivity3.class);
+            Intent intentASiguiente = new Intent(getApplicationContext(), PersonajesListaActivity.class);
             String sumaString = suma.toString();
             //Para enviar información
             intentASiguiente.putExtra("textoPrueba", "El resultado de la suma fue: " + sumaString);
