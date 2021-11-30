@@ -84,6 +84,7 @@ public class PersonajesListaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Si estamos acá es por que se seleccionó el botón flotante para agregar a un personaje
+                /*INICIO DE TIPOS DE MENSAJES, NOTIFICACIONES Y DIALOGOS*/
 
                 /* TOAST
                     Toast toast = Toast.makeText(getApplicationContext(), "Soy un mensaje por Toast", Toast.LENGTH_LONG);
@@ -110,6 +111,8 @@ public class PersonajesListaActivity extends AppCompatActivity {
                  */
                 FormularioCrearPersonaje formularioCrearPersonaje = new FormularioCrearPersonaje(PersonajesListaActivity.this,personajeAdaptador,personajesLista,personajes);
                 formularioCrearPersonaje.show();
+
+                /*FIN DE TIPOS DE MENSAJES, NOTIFICACIONES Y DIALOGOS*/
             }
         });
 
