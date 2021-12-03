@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="350dp"
-    android:background="#3E80B4"
+    android:layout_height="450dp"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical">
 
     <TextView
@@ -22,45 +24,65 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/form_personaje_nombre"
         android:inputType="textPersonName"
-        android:hint="@string/form_personaje_nombre" />
+        android:textColor="@color/white"
+        tools:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/editTextPoder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/form_personaje_poder" />
+        android:hint="@string/form_personaje_poder"
+        android:inputType="text"
+        android:textColor="@color/white"
+        tools:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/editTextDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/form_personaje_descripcion" />
+        android:hint="@string/form_personaje_descripcion"
+        android:inputType="text"
+        android:textColor="@color/white"
+        tools:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/editTextFuerza"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/form_personaje_fuerza"
         android:inputType="number"
-        android:hint="@string/form_personaje_fuerza" />
+        android:textColor="@color/white"
+        tools:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/editTextAgilidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/form_personaje_agilidad"
         android:inputType="number"
-        android:hint="@string/form_personaje_agilidad" />
+        android:textColor="@color/white"
+        tools:textColorHint="@color/white" />
+
+    <ImageView
+        android:id="@+id/imagenPersonaje"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        app:srcCompat="@drawable/ironman"
+        tools:textColorHint="@color/white" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:background="#3E80B4"
         android:orientation="horizontal">
 
@@ -71,7 +93,7 @@
             android:background="@android:color/white"
             android:clickable="true"
             android:text="Crear"
-            android:textColor="#5DBCD2"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <Button
@@ -82,7 +104,7 @@
             android:background="@android:color/white"
             android:clickable="true"
             android:text="Cancelar"
-            android:textColor="#5DBCD2"
+            android:textColor="@color/white"
             android:textStyle="bold" />
     </LinearLayout>
 

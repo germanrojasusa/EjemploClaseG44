@@ -11,16 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EjemploClase">
         <activity
-            android:name=".PersonajesDetalleActivity"
+            android:name=".presentacion.PersonajesDetalleActivity"
             android:exported="false" />
         <activity
-            android:name=".PersonajesListaActivity"
+            android:name=".presentacion.PersonajesListaActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".presentacion.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,5 +26,8 @@
             </intent-filter>
         </activity>
     </application>
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.reto1;
+package com.example.reto1.presentacion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,10 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.reto1.R;
+import com.example.reto1.datos.PersonajesLista;
+import com.example.reto1.modelo.Personaje;
+
 public class PersonajesDetalleActivity extends AppCompatActivity {
     private TextView name;
     private TextView description;
@@ -14,6 +18,8 @@ public class PersonajesDetalleActivity extends AppCompatActivity {
     private ImageView image;
     private ProgressBar strength;
     private ProgressBar agility;
+
+    private PersonajesLista personajesLista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +35,26 @@ public class PersonajesDetalleActivity extends AppCompatActivity {
         agility = (ProgressBar) findViewById(R.id.agility);
 
 
-        // Traemos la información que viene desde el ListView del Personaje seleccionado
+        // Utilizamos el Id de base de datos del personaje para luego consultar toda la unfo de
+        // nuestro personaje utilizando Personajes Lista
+        long personajeId = (long) getIntent().getLongExtra("idFromDBPersonaje",0);
+
+        personajesLista = new PersonajesLista(this);
         Personaje personaje;
-        personaje = (Personaje) getIntent().getParcelableExtra("personajeSelected");
+        personaje = personajesLista.getPersonajeById(personajeId);
 
         //Setear la información en los componentes gráficos (Vistas: textos, ProgressBar)
         name.setText(personaje.getName());
         power.setText(personaje.getPower());
         description.setText(personaje.getDescription());
-        image.setImageResource(personaje.getImageId());
         strength.setProgress(10*personaje.getStrength());
         agility.setProgress(10*personaje.getAgility());
 
+        if (personaje.getImageBitMap() != null){
+            image.setImageBitmap(personaje.getImageBitMap());
+        }else{
+            image.setImageResource(personaje.getImageId());
+        }
 
     }
 }

@@ -18,4 +18,6 @@
     <string name="form_personaje_descripcion">Descripción</string>
     <string name="form_personaje_fuerza">Fuerza</string>
     <string name="form_personaje_agilidad">Agilidad</string>
+    <string name="boton_editar">Editar</string>
+    <string name="boton_eliminar">Eliminar</string>
 </resources>

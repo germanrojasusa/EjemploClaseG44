@@ -1,4 +1,4 @@
-package com.example.reto1;
+package com.example.reto1.presentacion;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.reto1.R;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -49,6 +51,31 @@ public class MainActivity extends AppCompatActivity{
                 .setMessage("Soy una alerta para mostrar valores: \nBooleano:"+storeBoolean+"\nInt:"+storeInt+"\nString:"+storeString)
                 .show();
         */
+
+        //Creación de base de datos
+        /*
+        DbHelper dbHelper = new DbHelper(MainActivity.this);
+        SQLiteDatabase datos = dbHelper.getWritableDatabase();
+
+        if(datos != null){
+            //db2.close();
+            Toast.makeText(this, "BASE DE DATOS CREADA",Toast.LENGTH_LONG).show();
+
+            ContentValues values = new ContentValues();
+            values.put("nombre","IronmanEjemploDB");
+            values.put("descripcion","Descripción de ejemplo en BD");
+            values.put("poder","Poder ej. BD");
+            values.put("agilidad",4);
+            values.put("fuerza",3);
+            datos.insert(TABLE_PERSONAJES,null,values);
+        }else{
+            Toast.makeText(this, "ERROR AL CREAR LA BASE DE DATOS",Toast.LENGTH_LONG).show();
+        }
+*/
+        //datos.close();
+
+
+
         //Evento cuando se hace click sobre el botón botonSuma
         botonSuma.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
